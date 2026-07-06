@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/posts")
 public class PostController {
 
     private final Map<Long, Post> posts = new HashMap<>();

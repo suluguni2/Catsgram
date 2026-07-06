@@ -4,12 +4,15 @@ import lombok.*;
 
 import java.time.Instant;
 
-@Data
-@EqualsAndHashCode(of = "email")
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode(exclude = "email")
 public class User {
-    @NonNull private Long id;
-    @NonNull private String username;
-    @NonNull private String email;
-    @NonNull private String password;
-    @NonNull private Instant registrationDate;
+    private Long id;
+    private String username;
+    private String email;
+    private String password;
+    private Instant registrationDate;
 }
